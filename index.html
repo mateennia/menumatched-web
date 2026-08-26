@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MenuMatched — Find what fits you</title>
+<title>MenuMatched — Eat smarter. Everywhere.</title>
 <meta name="description" content="MenuMatched scans any restaurant menu and instantly finds the dishes that fit your diet, preferences, and goals.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,9 +11,8 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="wrap">
   <header class="site-header">
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <div class="wrap header-row">
       <a class="brand" href="/">
         <span class="brand-mark">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,49 +21,76 @@
         </span>
         MenuMatched
       </a>
-      <nav class="site-nav">
-        <a href="/privacy/">Privacy</a>
-        <a href="/support/">Support</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="site-nav">
+          <a href="/support/">Support</a>
+        </nav>
+        <a class="store-badge store-badge--small" href="#" aria-label="Download on the App Store">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.696.91-1.395 0-2.372-1.25-3.4-2.79-1.202-1.81-2.145-4.66-2.145-7.28 0-4.28 2.79-6.53 5.54-6.53 1.44 0 2.64.94 3.55.94.86 0 2.21-1.02 3.86-1.02.65 0 2.9.06 4.44 2.29-.11.07-2.61 1.53-2.61 4.6 0 3.66 3.16 4.94 3.19 4.95z"/></svg>
+          <span class="store-badge-text">
+            <small>Download on the</small>
+            App Store
+          </span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <p class="eyebrow">Now on iOS</p>
-    <h1 class="hero">Find what fits <span class="accent">you.</span></h1>
-    <p class="lede">Scan any restaurant menu and instantly see which dishes match your diet, your goals, and how you actually want to eat — no guessing, no spreadsheets.</p>
+    <section class="hero-image-wrap">
+      <img class="hero-image" src="/images/hero.png" alt="MenuMatched app showing today's nutrition summary and nearby restaurants to scan" width="2778" height="1284">
+    </section>
 
-    <ul class="features">
-      <li class="feature">
-        <span class="icon">📷</span>
-        <h3>Scan any menu</h3>
-        <p>A photo, a restaurant's website, or a QR code — MenuMatched reads the real menu and estimates nutrition for every dish.</p>
-      </li>
-      <li class="feature">
-        <span class="icon">🎯</span>
-        <h3>Matched to you</h3>
-        <p>Set your diet, allergies, and goals once. Every scan highlights the dish that actually fits — not just a generic list.</p>
-      </li>
-      <li class="feature">
-        <span class="icon">📈</span>
-        <h3>Track your day</h3>
-        <p>Log what you eat straight from a scan and see calories, protein, carbs, and fat add up against your daily goals.</p>
-      </li>
-    </ul>
+    <section class="wrap how-it-works" id="how-it-works">
+      <p class="eyebrow center">How it works</p>
+      <h2 class="how-title">Scan. Filter. Decide.</h2>
+      <p class="how-sub">Scan restaurant menus. Filter by calories, protein, dietary preferences, and more. Find what works for you.</p>
 
-    <div class="card">
-      <h2 style="font-size:1.1rem; margin-bottom:8px;">Questions before you download?</h2>
-      <p style="color:var(--muted-foreground); margin:0;">Read how MenuMatched handles your data in the <a href="/privacy/">Privacy Policy</a>, or reach out any time on the <a href="/support/">Support</a> page.</p>
-    </div>
+      <ul class="features">
+        <li class="feature">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4H5a1 1 0 0 0-1 1v3M16 4h3a1 1 0 0 1 1 1v3M8 20H5a1 1 0 0 1-1-1v-3M16 20h3a1 1 0 0 0 1-1v-3M7 12h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Scan any menu</h3>
+          <p>Turn restaurant menus into searchable results.</p>
+        </li>
+        <li class="feature">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M8 6v0a2 2 0 1 0 0-.01M4 12h16M15 12v0a2 2 0 1 0 0-.01M4 18h16M10 18v0a2 2 0 1 0 0-.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Find better options</h3>
+          <p>Sort and filter dishes based on what matters to you.</p>
+        </li>
+        <li class="feature">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.8"/></svg>
+          </span>
+          <h3>Discover nearby</h3>
+          <p>Find restaurants around you and Quick Scan their menus.</p>
+        </li>
+      </ul>
+
+      <div class="cta-center">
+        <a class="store-badge" href="#" aria-label="Download on the App Store">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.696.91-1.395 0-2.372-1.25-3.4-2.79-1.202-1.81-2.145-4.66-2.145-7.28 0-4.28 2.79-6.53 5.54-6.53 1.44 0 2.64.94 3.55.94.86 0 2.21-1.02 3.86-1.02.65 0 2.9.06 4.44 2.29-.11.07-2.61 1.53-2.61 4.6 0 3.66 3.16 4.94 3.19 4.95z"/></svg>
+          <span class="store-badge-text">
+            <small>Download on the</small>
+            App Store
+          </span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <span>© 2026 MenuMatched. All rights reserved.</span>
-    <nav>
-      <a href="/privacy/">Privacy</a>
-      <a href="/support/">Support</a>
-    </nav>
+    <div class="wrap footer-row">
+      <span>© 2026 MenuMatched. All rights reserved.</span>
+      <nav>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+      </nav>
+    </div>
   </footer>
-</div>
 </body>
 </html>

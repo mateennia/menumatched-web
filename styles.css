@@ -60,8 +60,73 @@ a:hover {
 }
 
 header.site-header {
-  padding: 28px 0;
+  padding: 22px 0;
   border-bottom: 1px solid var(--border);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+@media (max-width: 560px) {
+  .header-actions {
+    gap: 14px;
+  }
+  nav.site-nav {
+    display: none;
+  }
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #17140F;
+  color: #FFFFFF !important;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  line-height: 1.15;
+}
+
+.store-badge-text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.store-badge-text small {
+  font-weight: 400;
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.store-badge--small {
+  padding: 8px 14px;
+}
+
+.store-badge--small .store-badge-text {
+  font-size: 0.82rem;
+}
+
+.store-badge--small .store-badge-text small {
+  font-size: 0.56rem;
+}
+
+.store-badge:hover {
+  background: #000000;
 }
 
 .brand {
@@ -107,7 +172,7 @@ nav.site-nav a:hover {
 }
 
 main {
-  padding: 64px 0 40px;
+  padding: 0 0 40px;
 }
 
 .eyebrow {
@@ -119,20 +184,41 @@ main {
   margin: 0 0 14px;
 }
 
-h1.hero {
-  font-size: clamp(2.1rem, 5vw, 2.9rem);
-  line-height: 1.12;
+.eyebrow.center {
+  text-align: center;
 }
 
-h1.hero .accent {
-  color: var(--primary);
+/* Hero is the marketing image itself (headline/subhead/CTA are already
+   composed into the artwork) — full-bleed, capped so it never dwarfs the
+   content that follows on a very wide viewport. */
+.hero-image-wrap {
+  width: 100%;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
 }
 
-.lede {
-  font-size: 1.15rem;
+.hero-image {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  display: block;
+}
+
+.how-it-works {
+  padding: 72px 0 56px;
+  text-align: center;
+}
+
+.how-title {
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
+}
+
+.how-sub {
+  font-size: 1.08rem;
   color: var(--muted-foreground);
-  margin: 20px 0 0;
-  max-width: 46ch;
+  max-width: 50ch;
+  margin: 16px auto 0;
 }
 
 .features {
@@ -142,23 +228,35 @@ h1.hero .accent {
   margin: 48px 0;
   padding: 0;
   list-style: none;
+  text-align: left;
 }
 
 .feature {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 20px;
+  padding: 24px 22px;
 }
 
-.feature .icon {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  display: block;
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(201, 123, 90, 0.12);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.feature-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .feature h3 {
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   margin-bottom: 6px;
 }
 
@@ -172,6 +270,12 @@ h1.hero .accent {
   .features {
     grid-template-columns: 1fr;
   }
+}
+
+.cta-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
 }
 
 .card {
@@ -281,6 +385,9 @@ footer.site-footer {
   padding: 28px 0 48px;
   color: var(--muted-foreground);
   font-size: 0.88rem;
+}
+
+.footer-row {
   display: flex;
   justify-content: space-between;
   gap: 12px;
