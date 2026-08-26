@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — MenuMatched</title>
+<meta name="description" content="MenuMatched's privacy policy: what we collect, why, and who it's shared with.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+      <a class="brand" href="/">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 4H5a1 1 0 0 0-1 1v3M16 4h3a1 1 0 0 1 1 1v3M8 20H5a1 1 0 0 1-1-1v-3M16 20h3a1 1 0 0 0 1-1v-3M7 12h10" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        MenuMatched
+      </a>
+      <nav class="site-nav">
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: August 23, 2026</p>
+
+    <div class="card">
+      <p>This policy covers what MenuMatched ("the app," "we") collects, why, and who it's shared with.</p>
+      <p>Contact for privacy questions: <a href="mailto:mateennia@gmail.com">mateennia@gmail.com</a></p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><strong>Account info</strong>: your email address (if you sign up with email), or your name and email as shared by Apple or Google (if you use Sign in with Apple/Google). Apple's "Hide My Email" is supported — you don't have to share your real address to use the app.</li>
+        <li><strong>Location</strong>: your approximate location, only while the app is open, used to show nearby restaurants you can scan. Never stored on our servers — it's used for that one request and discarded.</li>
+        <li><strong>Photos you scan</strong>: menu photos and food photos you choose to scan. These are sent to our AI provider (see below) to extract dishes and estimate nutrition, and are not retained by us after processing.</li>
+        <li><strong>Food log and saved items</strong>: the meals you log, restaurants and dishes you save, and the nutrition goals you set — this is core to how the app works, and stays tied to your account until you delete it.</li>
+        <li><strong>Subscription status</strong>: whether you have an active MenuMatched subscription, and its expiration date, as reported by the App Store. We don't receive or store your payment details — Apple handles billing entirely.</li>
+      </ul>
+
+      <h2>Who we share it with</h2>
+      <p>We use a small number of service providers to make the app work. Each only receives what it needs to do its specific job:</p>
+      <ul>
+        <li><strong>Anthropic (Claude API)</strong> — processes menu and food photos, and restaurant website text, to extract dishes and estimate nutrition.</li>
+        <li><strong>Google Places API</strong> — looks up nearby restaurants and their photos based on your location.</li>
+        <li><strong>Firecrawl</strong> — reads restaurant websites when you scan a menu from a website link.</li>
+        <li><strong>Supabase</strong> — hosts our database, authentication, and backend functions. All of the above runs through Supabase's infrastructure.</li>
+        <li><strong>Apple / Google</strong> — if you use Sign in with Apple or Sign in with Google, they authenticate you and share your name/email (or a relay address) with us, per their own privacy policies.</li>
+      </ul>
+      <p>We don't sell your data, and we don't share it with anyone for advertising.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li><strong>Delete your account</strong>: Profile → Delete Account, in the app. This permanently removes your account, food log, saved menus, and favorites. This can't be undone.</li>
+        <li><strong>Location</strong>: you can deny or revoke location access in iOS Settings at any time — nearby restaurants just won't show without it, everything else still works.</li>
+        <li><strong>Sign out</strong>: Profile → Sign out, at any time.</li>
+      </ul>
+
+      <h2>Data retention</h2>
+      <p>Your account data is kept as long as your account exists. Scanned photos themselves are not stored after the AI provider processes them — only the extracted results (dish names, nutrition estimates) are saved to your account.</p>
+
+      <h2>Third-party data</h2>
+      <p>Cooking-oil grades, risk levels, and cooking-oil notes shown on some restaurants come from Seed Oil Tracker (seedoiltracker.com), used under a Creative Commons Attribution 4.0 International license (CC BY 4.0). This data reflects Seed Oil Tracker's own research and is not independently verified by MenuMatched.</p>
+
+      <h2>Children</h2>
+      <p>MenuMatched isn't directed at children under 13, and we don't knowingly collect data from them.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes in a meaningful way, we'll update the date at the top. Continued use of the app after a change means you accept the update.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy or your data: <a href="mailto:mateennia@gmail.com">mateennia@gmail.com</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 MenuMatched. All rights reserved.</span>
+    <nav>
+      <a href="/privacy/">Privacy</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>

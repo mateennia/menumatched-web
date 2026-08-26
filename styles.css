@@ -1,0 +1,297 @@
+/* MenuMatched public site — tokens ported directly from the app's own
+   ios/MenuMatched/Design/ColorTokens.swift (light mode values) and type
+   choices (Fraunces display / Inter body), so the site and the app read
+   as the same product. */
+
+:root {
+  --background: #F6F2EA;
+  --background-grad-top: #FAF7F1;
+  --background-grad-bottom: #F3EEE3;
+  --foreground: #201E1B;
+  --card: #FFFFFF;
+  --border: #E9E3D8;
+  --primary: #C97B5A;
+  --primary-ink: #FFFFFF;
+  --muted-foreground: #766A60;
+  --success: #50956D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--background-grad-top), var(--background-grad-bottom));
+  color: var(--foreground);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+a {
+  color: var(--primary);
+  text-decoration-color: rgba(201, 123, 90, 0.35);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--primary);
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site-header {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.brand-mark svg {
+  width: 17px;
+  height: 17px;
+}
+
+nav.site-nav {
+  display: flex;
+  gap: 20px;
+  font-size: 0.95rem;
+}
+
+nav.site-nav a {
+  color: var(--muted-foreground);
+  text-decoration: none;
+}
+
+nav.site-nav a:hover {
+  color: var(--foreground);
+}
+
+main {
+  padding: 64px 0 40px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 14px;
+}
+
+h1.hero {
+  font-size: clamp(2.1rem, 5vw, 2.9rem);
+  line-height: 1.12;
+}
+
+h1.hero .accent {
+  color: var(--primary);
+}
+
+.lede {
+  font-size: 1.15rem;
+  color: var(--muted-foreground);
+  margin: 20px 0 0;
+  max-width: 46ch;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 48px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.feature .icon {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.feature h3 {
+  font-size: 1.02rem;
+  margin-bottom: 6px;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 640px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 30px;
+  margin-top: 28px;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.doc h1 {
+  font-size: clamp(1.7rem, 4vw, 2.1rem);
+}
+
+.doc .updated {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  margin: 10px 0 0;
+}
+
+.doc h2 {
+  font-size: 1.25rem;
+  margin: 40px 0 14px;
+  padding-top: 4px;
+}
+
+.doc h2:first-of-type {
+  margin-top: 32px;
+}
+
+.doc p, .doc li {
+  font-size: 1rem;
+}
+
+.doc ul {
+  padding-left: 22px;
+}
+
+.doc li + li {
+  margin-top: 10px;
+}
+
+.doc strong {
+  color: var(--foreground);
+}
+
+.faq-item + .faq-item {
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--muted-foreground);
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-box .to {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  margin: 0 0 4px;
+}
+
+.contact-box .email {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--primary-ink) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none !important;
+  margin-left: auto;
+}
+
+@media (max-width: 480px) {
+  .contact-box .button {
+    margin-left: 0;
+  }
+}
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0 48px;
+  color: var(--muted-foreground);
+  font-size: 0.88rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+footer.site-footer a {
+  color: var(--muted-foreground);
+}
+
+footer.site-footer nav {
+  display: flex;
+  gap: 16px;
+}
