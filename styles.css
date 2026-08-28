@@ -4,9 +4,13 @@
    as the same product. */
 
 :root {
-  --background: #F6F2EA;
-  --background-grad-top: #FAF7F1;
-  --background-grad-bottom: #F3EEE3;
+  /* Matched to the hero photo's own baked-in background (sampled directly
+     from images/hero.png) rather than the other way around — that photo's
+     background can't be edited, so the page has to meet it exactly or the
+     seam around the image will always show. Flat, not a gradient: the photo
+     is one flat color top to bottom, so a gradient body can only match it
+     at one scroll position and drift everywhere else. */
+  --background: #FAF3EE;
   --foreground: #201E1B;
   --card: #FFFFFF;
   --border: #E9E3D8;
@@ -27,7 +31,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--background-grad-top), var(--background-grad-bottom));
+  background: var(--background);
   color: var(--foreground);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 17px;
@@ -60,7 +64,7 @@ a:hover {
 }
 
 header.site-header {
-  padding: 22px 0;
+  padding: 30px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -79,10 +83,26 @@ header.site-header {
 
 @media (max-width: 560px) {
   .header-actions {
-    gap: 14px;
+    gap: 12px;
   }
   nav.site-nav {
     display: none;
+  }
+  /* The full two-line "Download on the / App Store" badge is too wide next
+     to the (now-larger) logo at phone widths — drop the "Download on the"
+     line and keep just the icon + "App Store", same pattern App Store
+     badges themselves use responsively. */
+  .store-badge--small {
+    padding: 9px 12px;
+  }
+  .store-badge--small .store-badge-text small {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand {
+    font-size: 1.1rem;
   }
 }
 
@@ -114,15 +134,15 @@ header.site-header {
 }
 
 .store-badge--small {
-  padding: 8px 14px;
+  padding: 10px 16px;
 }
 
 .store-badge--small .store-badge-text {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
 }
 
 .store-badge--small .store-badge-text small {
-  font-size: 0.56rem;
+  font-size: 0.6rem;
 }
 
 .store-badge:hover {
@@ -132,18 +152,18 @@ header.site-header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: "Fraunces", Georgia, serif;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: var(--foreground);
   text-decoration: none;
 }
 
 .brand-mark {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: var(--primary);
   display: inline-flex;
   align-items: center;
@@ -152,14 +172,14 @@ header.site-header {
 }
 
 .brand-mark svg {
-  width: 17px;
-  height: 17px;
+  width: 21px;
+  height: 21px;
 }
 
 nav.site-nav {
   display: flex;
-  gap: 20px;
-  font-size: 0.95rem;
+  gap: 24px;
+  font-size: 1rem;
 }
 
 nav.site-nav a {
